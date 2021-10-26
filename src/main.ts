@@ -6,6 +6,7 @@ dotenv.config();
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  // ENABLING CROSS ORIGIN
   app.enableCors();
   await app.listen(process.env.PORT);
 }

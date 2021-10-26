@@ -8,9 +8,9 @@ export class AppService {
     return 'Hello World!';
   }
 
-  async getPokemon(id: number): Promise<any> {
+  async getPokemon(id: any): Promise<any> {
+    //max number of pokemons based on the api
     if (id > 1118) {
-      //max number of pokemons
       throw new HttpException(
         {
           status: HttpStatus.FORBIDDEN,
